@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✦ ICO Fairy — конвертер иконок</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="blob-layer">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+</div>
+<div class="dots-bg"></div>
+
+<canvas id="work-canvas"></canvas>
+
+<div class="wrapper">
+
+  <header>
+    <div class="logo-badge">✦ ICO Fairy</div>
+    <h1>Преврати картинку<br>в <em>иконку</em></h1>
+    <p class="subtitle">Конвертируй любое изображение в .ico прямо в браузере.<br>Никаких загрузок на сервер — всё локально.</p>
+    <div class="sparkles">
+      <div class="sparkle"></div>
+      <div class="sparkle"></div>
+      <div class="sparkle"></div>
+    </div>
+  </header>
+
+  <div class="card">
+
+    <div class="drop-zone" id="drop-zone">
+      <div class="drop-icon">🌸</div>
+      <div class="drop-title">Перетащи изображения сюда</div>
+      <p class="drop-sub">Поддерживаются PNG, JPG, JPEG, GIF, BMP, WebP, SVG<br>и любые другие форматы изображений · до 20 файлов за раз</p>
+      <button class="btn-pick" onclick="document.getElementById('file-input').click()">
+        ✦ Выбрать файлы
+      </button>
+      <input type="file" id="file-input" accept="image/*" multiple>
+    </div>
+
+    <div class="multi-preview" id="multi-preview">
+      <div class="mp-header">
+        <div class="mp-label">✦ Файлы</div>
+        <div class="mp-count" id="mp-count">0 / 20</div>
+      </div>
+      <div class="mp-grid" id="mp-grid"></div>
+      <div class="mp-actions">
+        <button class="btn-add-more" id="btn-add-more">＋ Добавить ещё</button>
+        <button class="btn-clear" id="btn-clear">Очистить всё</button>
+      </div>
+    </div>
+
+    <div class="settings" id="settings">
+      <div class="settings-label">✦ Размеры иконок</div>
+      <div class="size-grid" id="size-grid"></div>
+    </div>
+
+    <div class="error-msg" id="error-msg"></div>
+
+    <div class="convert-wrap" id="convert-wrap">
+      <button class="btn-convert" id="btn-convert">
+        <span>🪄</span> Конвертировать в ICO
+      </button>
+    </div>
+
+    <div class="progress-wrap" id="progress-wrap">
+      <div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div>
+      <div class="progress-text" id="progress-text">Подготовка…</div>
+    </div>
+
+    <div class="result-section" id="result-section">
+      <div class="result-card">
+        <div class="result-icon">🎀</div>
+        <div class="result-title">Готово!</div>
+        <div class="result-sub" id="result-sub">Твои иконки созданы</div>
+        <div class="result-rows" id="result-rows"></div>
+        <button class="btn-dl-all" id="btn-dl-all">⬇︎ Скачать все .ico</button>
+        <button class="btn-again" id="btn-again">↩ Конвертировать другие изображения</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="features">
+    <div class="feature-item">
+      <div class="feature-emoji">🔒</div>
+      <div class="feature-title">100% приватно</div>
+      <div class="feature-desc">Файлы не покидают твой браузер. Никаких серверов.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-emoji">⚡</div>
+      <div class="feature-title">До 20 файлов</div>
+      <div class="feature-desc">Загружай сразу пачку изображений и конвертируй одним кликом.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-emoji">🎨</div>
+      <div class="feature-title">Любой размер</div>
+      <div class="feature-desc">Выбери один или несколько размеров: 16, 32, 48, 64, 128, 256 px.</div>
+    </div>
+  </div>
+
+  <footer>
+    Сделано с <span>♥</span> · Работает полностью в браузере · Без рекламы
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
