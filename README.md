@@ -7,3 +7,4 @@
 **Технологии:** HTML, CSS, JavaScript (Canvas API, File API, Drag & Drop)
 
 **Смотреть:** https://minakmin29-tech.github.io/ICO-Fairy/
+![скриншот](ico-fairy.png)
